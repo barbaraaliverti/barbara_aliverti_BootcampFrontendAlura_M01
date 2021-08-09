@@ -1,9 +1,12 @@
-import styled from 'styled-components'
-
-const Title = (props) => {
-  return(<h1>{props.children}</h1>)
-}
+import React from 'react';
+import Capa from '../src/components/Capa';
+import Cabecalho from '../src/components/Cabecalho';
 
 export default function Home() {
-  return <Title>bárbara aliverti</Title>
+  return (
+    <Capa>
+      <Cabecalho />
+    </Capa>
+
+  );
 }
