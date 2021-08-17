@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Logo from '../../theme/Logo';
 
 const menuLinks = [
   {
@@ -27,17 +28,18 @@ const Cabecalho = styled.nav`
   height: 40px;
   justify-content: space-between;
   list-style: none;
-  padding: 0 50px;
+  padding: 0 16px;
   text-decoration: none;
   top: 1025px;
 `;
 
-const Logo = styled.div`
+Cabecalho.LeftSide = styled.div`
   a {
     background-color: black;
     color: whitesmoke;
     display: block;
     padding: 10px;
+    height: 100%;
     text-align: center;
     text-decoration: none;
     transition: 200ms ease-in-out;
@@ -47,12 +49,17 @@ const Logo = styled.div`
         cursor: pointer;
     }    
   }
+
+  svg {
+    width: 100px;
+    height: 100px;
+  }
 `;
 
 const Navbar = styled.div`
   display: flex;
-  justify-content: space-around;
-  width: 50%;
+  justify-content: space-between;
+  width: 70%;
 
   a {
     color: black;
@@ -70,9 +77,9 @@ const Navbar = styled.div`
 
 const Menu = () => (
   <Cabecalho>
-    <Logo>
-      <a href="/">&lt;BA/&gt;</a>
-    </Logo>
+    <Cabecalho.LeftSide>
+      <Logo></Logo>
+    </Cabecalho.LeftSide>
 
     <Navbar>
       {menuLinks.map((link) => (
