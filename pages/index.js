@@ -3,6 +3,7 @@ import Capa from '../src/components/Capa';
 import Cabecalho from '../src/components/Cabecalho';
 import WrapperProjetos from '../src/components/WrapperProjetos';
 import SectionTitle from '../src/components/SectionTitle';
+import Card from '../src/components/Card';
 
 export default function Home() {
   return (
@@ -10,7 +11,14 @@ export default function Home() {
       <Capa>
         <Cabecalho />
       </Capa>
-      <WrapperProjetos />
+      <WrapperProjetos>
+        <SectionTitle>
+          Projetos
+        </SectionTitle>
+        <Card>
+          
+        </Card>
+      </WrapperProjetos>
     </>
   );
 }

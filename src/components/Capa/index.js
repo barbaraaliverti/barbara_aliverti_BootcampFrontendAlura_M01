@@ -1,11 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
+import Logo from '../../theme/Logo';
 import Cabecalho from '../Cabecalho';
 
 const CapaWrapper = styled.div`
-    background-image: url("/images/20191130_152433.jpg");
-    background-size: cover;
-    background-position: center;
     height: 100vh;
     background-color: rgba(255, 255, 255, 0.7);
     z-index: -100;
@@ -14,13 +12,18 @@ const CapaWrapper = styled.div`
 const MainTitle = styled.div`
     height: 100%;
     width: 100%;
-    background: rgba(255,255,255,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 `;
 
 const Capa = () => (
   <CapaWrapper>
+    <Cabecalho />
     <MainTitle>
-      <Cabecalho />
+        <Logo></Logo>
+      Bárbara Aliverti
     </MainTitle>
   </CapaWrapper>
 );

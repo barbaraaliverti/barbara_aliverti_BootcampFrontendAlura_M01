@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const SectionTitle = styled.div`
+const SectionTitle = styled.h1`
     
 `;
 

@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import Logo from '../../theme/Logo';
 
 const menuLinks = [
   {
@@ -17,7 +16,7 @@ const menuLinks = [
   },
 ];
 
-const Cabecalho = styled.nav`
+const CabecalhoWrapper = styled.nav`
   align-items: center;
   color: black;
   display: flex;
@@ -33,33 +32,33 @@ const Cabecalho = styled.nav`
   top: 1025px;
 `;
 
-Cabecalho.LeftSide = styled.div`
-  a {
-    background-color: black;
-    color: whitesmoke;
-    display: block;
-    padding: 10px;
-    height: 100%;
-    text-align: center;
-    text-decoration: none;
-    transition: 200ms ease-in-out;
-    &:hover,
-    &:focus {
-        font-weight: 500;
-        cursor: pointer;
-    }    
-  }
+// Cabecalho.LeftSide = styled.div`
+//   a {
+//     background-color: black;
+//     color: whitesmoke;
+//     display: block;
+//     padding: 10px;
+//     height: 100%;
+//     text-align: center;
+//     text-decoration: none;
+//     transition: 200ms ease-in-out;
+//     &:hover,
+//     &:focus {
+//         font-weight: 500;
+//         cursor: pointer;
+//     }    
+//   }
 
-  svg {
-    width: 100px;
-    height: 100px;
-  }
-`;
+//   svg {
+//     width: 100px;
+//     height: 100px;
+//   }
+// `;
 
 const Navbar = styled.div`
   display: flex;
-  justify-content: space-between;
-  width: 70%;
+  justify-content: space-evenly;
+  width: 100%;
 
   a {
     color: black;
@@ -75,11 +74,8 @@ const Navbar = styled.div`
   }
 `;
 
-const Menu = () => (
-  <Cabecalho>
-    <Cabecalho.LeftSide>
-      <Logo></Logo>
-    </Cabecalho.LeftSide>
+const Cabecalho = () => (
+  <CabecalhoWrapper>
 
     <Navbar>
       {menuLinks.map((link) => (
@@ -89,7 +85,7 @@ const Menu = () => (
       ))}
     </Navbar>
 
-  </Cabecalho>
+  </CabecalhoWrapper>
 );
 
-export default Menu;
+export default Cabecalho;
