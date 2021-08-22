@@ -1,21 +1,25 @@
-import { createGlobalStyle, ThemeProvider } from 'styled-components';
-import theme from '../src/theme';
+/* eslint-disable react/jsx-props-no-spreading */
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import Head from 'next/head';
+import GlobalStyle from '../src/theme/GlobalStyle';
 
-const GlobalStyle = createGlobalStyle`
-  body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-`
+import theme from '../src/theme';
 
 export default function App({ Component, pageProps }) {
   return (
     <>
-      <GlobalStyle />
+      <Head>
+        <title>Bárbara Aliverti | Portfolio</title>
+        <link rel="stylesheet" href="https://use.typekit.net/wqs2cho.css" />
+      </Head>
+
       <ThemeProvider theme={theme}>
+        <GlobalStyle />
         <Component {...pageProps} />
       </ThemeProvider>
     </>
-  )
+  );
 }
+
+// add proptypes

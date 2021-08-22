@@ -46,7 +46,7 @@ const CabecalhoWrapper = styled.nav`
 //     &:focus {
 //         font-weight: 500;
 //         cursor: pointer;
-//     }    
+//     }
 //   }
 
 //   svg {

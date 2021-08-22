@@ -4,6 +4,7 @@ import Cabecalho from '../src/components/Cabecalho';
 import WrapperProjetos from '../src/components/WrapperProjetos';
 import SectionTitle from '../src/components/SectionTitle';
 import Card from '../src/components/Card';
+import Footer from '../src/components/Footer';
 
 export default function Home() {
   return (
@@ -15,10 +16,9 @@ export default function Home() {
         <SectionTitle>
           Projetos
         </SectionTitle>
-        <Card>
-          
-        </Card>
+        <Card />
       </WrapperProjetos>
+      <Footer />
     </>
   );
 }

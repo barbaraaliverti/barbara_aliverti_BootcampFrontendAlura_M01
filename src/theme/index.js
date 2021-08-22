@@ -47,6 +47,7 @@ const colors = {
 
 export default {
   colors,
+  fontFamily: '\'aileron\', sans-serif',
   transition: '200ms ease-in-out',
   borderRadius: '8px',
-}; 
+};
