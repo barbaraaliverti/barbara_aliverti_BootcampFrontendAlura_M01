@@ -23,10 +23,6 @@ const GlobalStyle = createGlobalStyle`
         width: 100%;
     }
 
-    a {
-        
-    }
-
     #__next {
         flex: 1;
         display: flex;

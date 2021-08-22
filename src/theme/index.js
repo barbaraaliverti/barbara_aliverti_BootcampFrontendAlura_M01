@@ -1,3 +1,5 @@
+import typographyVariants from './typographyVariants';
+
 const colors = {
   background: {
     light: {
@@ -47,6 +49,7 @@ const colors = {
 
 export default {
   colors,
+  typographyVariants,
   fontFamily: '\'aileron\', sans-serif',
   transition: '200ms ease-in-out',
   borderRadius: '8px',

@@ -11,6 +11,7 @@ const FooterWrapper = styled.div`
     justify-content: center;
     padding-right: 28px;
     padding-left: 28px;
+    list-style: none;
     
     a {
         color: ${({ theme }) => theme.colors.primary.main.colorText};
@@ -57,9 +58,11 @@ const Footer = (props) => (
     <FooterIcons>
 
       { socialMediaLinks.map((item) => (
-        <a href={item.url} target="_blank" rel="noreferrer">
-          <FontAwesomeIcon icon={item.icon} />
-        </a>
+        <li key={item.url}>
+          <a href={item.url} target="_blank" rel="noreferrer">
+            <FontAwesomeIcon icon={item.icon} />
+          </a>
+        </li>
       ))}
 
     </FooterIcons>

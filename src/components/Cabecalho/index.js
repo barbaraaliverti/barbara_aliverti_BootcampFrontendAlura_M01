@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
+import Text from '../Text';
 
 const menuLinks = [
   {
     text: 'about',
-    url: '/about',
+    url: 'https://www.google.com',
   },
   {
     text: 'projects',
@@ -79,8 +80,8 @@ const Cabecalho = () => (
 
     <Navbar>
       {menuLinks.map((link) => (
-        <li>
-          <a href={link.url}>{link.text}</a>
+        <li key={link.url}>
+          <Text tag="a" variant="smallestException" href={link.url}>{link.text}</Text>
         </li>
       ))}
     </Navbar>
