@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import styled, { css } from 'styled-components';
 import PropTypes from 'prop-types';
@@ -21,10 +22,13 @@ const TextBase = styled.span`
     ${(props) => textStyleVariantsMap[props.variant]}
 `;
 
-const Text = ({ tag, variant, children }) => (
+const Text = ({
+  tag, variant, children, ...props
+}) => (
   <TextBase
     as={tag}
     variant={variant}
+    {...props}
   >
     {children}
   </TextBase>

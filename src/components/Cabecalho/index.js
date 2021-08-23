@@ -22,15 +22,36 @@ const CabecalhoWrapper = styled.nav`
   color: black;
   display: flex;
   flex-direction: row;
-  font-family: 'Roboto Condensed', sans-serif;
-  font-size: 18px;
-  font-weight: 700;
   height: 40px;
-  justify-content: space-between;
+  justify-content: space-evenly;
   list-style: none;
   padding: 0 16px;
   text-decoration: none;
   top: 1025px;
+  width: 100%;
+
+  a {
+    color: black;
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+
+    &:after {
+      content: "";
+      width: 100%;
+      height: 5px;
+      background-color: ${({ theme }) => theme.colors.secondary.light.color};
+      display: block;
+    }
+
+    &:hover::after,
+    &:focus::after {
+      background-color: ${({ theme }) => theme.colors.secondary.main.color};
+      transition: 200ms ease-in-out;
+    }
+  }
 `;
 
 // Cabecalho.LeftSide = styled.div`
@@ -56,35 +77,23 @@ const CabecalhoWrapper = styled.nav`
 //   }
 // `;
 
-const Navbar = styled.div`
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
+// const Navbar = styled.div`
+//   display: flex;
+//   justify-content: space-evenly;
+//   width: 100%;
 
-  a {
-    color: black;
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    transition: 200ms ease-in-out;
-    &:hover,
-    &:focus {
-        font-weight: 500;
-        cursor: pointer;
-    }
-  }
-`;
+// `;
 
 const Cabecalho = () => (
   <CabecalhoWrapper>
 
-    <Navbar>
-      {menuLinks.map((link) => (
-        <li key={link.url}>
-          <Text tag="a" variant="smallestException" href={link.url}>{link.text}</Text>
-        </li>
-      ))}
-    </Navbar>
+    {menuLinks.map((link) => (
+      <li key={link.url}>
+        <Text tag="a" variant="paragraph1" href={link.url} rel="noreferrer">
+          {link.text}
+        </Text>
+      </li>
+    ))}
 
   </CabecalhoWrapper>
 );

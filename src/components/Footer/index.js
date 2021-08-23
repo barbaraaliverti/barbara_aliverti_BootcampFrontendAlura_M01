@@ -3,6 +3,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import Text from '../Text';
 
 const FooterWrapper = styled.div`
     background-color: ${({ theme }) => theme.colors.primary.light.color};
@@ -27,12 +28,12 @@ const FooterWrapper = styled.div`
 const FooterIcons = styled.div`
     background-color: ${({ theme }) => theme.colors.secondary.main.color};
     width: 228px;
-    height: 68px;
+    height: 50px;
     display: flex;
     justify-content: space-evenly;
 
     svg {
-        width: 30px;
+        width: 20px;
         height: 100%;
     }
 
@@ -59,9 +60,9 @@ const Footer = (props) => (
 
       { socialMediaLinks.map((item) => (
         <li key={item.url}>
-          <a href={item.url} target="_blank" rel="noreferrer">
-            <FontAwesomeIcon icon={item.icon} />
-          </a>
+          <Text tag="a" variant="smallestException" href={item.url} target="_blank" rel="noreferrer">
+            <FontAwesomeIcon icon={item.icon} size="xs" />
+          </Text>
         </li>
       ))}
 

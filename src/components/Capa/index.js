@@ -1,13 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import Logo from '../../theme/Logo';
-import Cabecalho from '../Cabecalho';
-
-const CapaWrapper = styled.div`
-    height: 100vh;
-    background-color: rgba(255, 255, 255, 0.7);
-    z-index: -100;
-`;
 
 const MainTitle = styled.div`
     height: 100%;
@@ -19,13 +12,10 @@ const MainTitle = styled.div`
 `;
 
 const Capa = () => (
-  <CapaWrapper>
-    <Cabecalho />
-    <MainTitle>
-        <Logo></Logo>
-      Bárbara Aliverti
-    </MainTitle>
-  </CapaWrapper>
+  <MainTitle>
+    <Logo />
+    Bárbara Aliverti
+  </MainTitle>
 );
 
 export default Capa;

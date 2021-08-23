@@ -5,13 +5,16 @@ import WrapperProjetos from '../src/components/WrapperProjetos';
 import SectionTitle from '../src/components/SectionTitle';
 import Card from '../src/components/Card';
 import Footer from '../src/components/Footer';
+import CapaWrapper from '../src/components/Capa/CapaWrapper';
 
 export default function Home() {
   return (
     <>
-      <Capa>
+      <CapaWrapper>
         <Cabecalho />
-      </Capa>
+        <Capa />
+      </CapaWrapper>
+
       <WrapperProjetos>
         <SectionTitle>
           Projetos
