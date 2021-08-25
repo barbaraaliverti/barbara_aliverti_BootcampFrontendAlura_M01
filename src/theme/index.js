@@ -1,4 +1,5 @@
 import typographyVariants from './typographyVariants';
+import breakpoints from './breakpoints';
 
 const colors = {
   background: {
@@ -51,6 +52,7 @@ export default {
   colors,
   typographyVariants,
   fontFamily: '\'aileron\', sans-serif',
+  breakpoints,
   transition: '200ms ease-in-out',
   borderRadius: '8px',
 };

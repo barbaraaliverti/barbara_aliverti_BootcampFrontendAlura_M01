@@ -1,9 +1,10 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithubAlt } from '@fortawesome/free-brands-svg-icons';
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons';
-import Text from '../Text';
+import breakpointsMedia from '../../theme/helpers/breakpointsMedia';
+// import Text from '../Text';
 
 const projects = [
   {
@@ -91,6 +92,11 @@ const CardWrapper = styled.div`
     border: 1px solid black;
     position: relative;
     margin: 20px 40px;
+
+    ${breakpointsMedia({
+    xs: css`border: 2px solid red;`,
+    md: css`border: 2px solid blue;`,
+  })}
     
 `;
 
@@ -136,9 +142,9 @@ const ButtonWrapper = styled.div`
 const Card = () => (
   <>
     {projects.map((project) => (
-      <CardWrapper>
+      <CardWrapper key={project.title}>
         <CardImage>
-          <img src={project.imageSrc} alt={`${project.title} screencap`}/>
+          <img src={project.imageSrc} alt={`${project.title} screencap`} />
         </CardImage>
         <ButtonWrapper>
           <Button href={project.externalUrl}>
