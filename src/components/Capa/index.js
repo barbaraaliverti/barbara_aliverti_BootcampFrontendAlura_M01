@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Logo from '../../theme/Logo';
+import Text from '../Text';
 
 const MainTitle = styled.div`
     height: 100%;
@@ -14,7 +15,16 @@ const MainTitle = styled.div`
 const Capa = () => (
   <MainTitle>
     <Logo />
-    Bárbara Aliverti
+    <Text
+      as="h1"
+      variant="title"
+      color={{
+        xs: 'red',
+        md: 'blue',
+      }}
+    >
+      Bárbara Aliverti
+    </Text>
   </MainTitle>
 );
 
