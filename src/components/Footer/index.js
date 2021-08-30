@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub, faLinkedinIn, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import Text from '../Text';
 
-const FooterWrapper = styled.div`
+const FooterWrapper = styled.footer`
     background-color: ${({ theme }) => theme.colors.primary.light.color};
     display: flex;
     align-items: center;
@@ -13,6 +13,10 @@ const FooterWrapper = styled.div`
     padding-right: 28px;
     padding-left: 28px;
     list-style: none;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100%;
     
     a {
         color: ${({ theme }) => theme.colors.primary.main.colorText};

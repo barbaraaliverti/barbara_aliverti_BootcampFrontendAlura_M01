@@ -54,36 +54,6 @@ const CabecalhoWrapper = styled.nav`
   }
 `;
 
-// Cabecalho.LeftSide = styled.div`
-//   a {
-//     background-color: black;
-//     color: whitesmoke;
-//     display: block;
-//     padding: 10px;
-//     height: 100%;
-//     text-align: center;
-//     text-decoration: none;
-//     transition: 200ms ease-in-out;
-//     &:hover,
-//     &:focus {
-//         font-weight: 500;
-//         cursor: pointer;
-//     }
-//   }
-
-//   svg {
-//     width: 100px;
-//     height: 100px;
-//   }
-// `;
-
-// const Navbar = styled.div`
-//   display: flex;
-//   justify-content: space-evenly;
-//   width: 100%;
-
-// `;
-
 const Cabecalho = () => (
   <CabecalhoWrapper>
 
