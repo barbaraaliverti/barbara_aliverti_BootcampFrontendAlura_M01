@@ -7,15 +7,15 @@ const WrapperProjetos = styled.div`
     flex-direction: column;
 
     ${breakpointsMedia({
-        xs: css`background-color: red;`,
-        md: css`
+    xs: css`background-color: red;`,
+    md: css`
             background-color: blue;
             flex-direction: row;
             flex-wrap: wrap;
             align-items: center;
             justify-content: center;
         `,
-    })}
+  })}
 `;
 
 export default WrapperProjetos;

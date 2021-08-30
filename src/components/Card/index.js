@@ -8,6 +8,20 @@ import PropTypes from 'prop-types';
 import breakpointsMedia from '../../theme/helpers/breakpointsMedia';
 // import Text from '../Text';
 
+const CardDestaque = css`
+    wrapper {
+      width: 100%;
+      display: flex;
+      margin: 0 12%;
+      height: 30%;
+    }
+
+    img {
+      width: 50%;
+      height: 100%;
+    }
+`;
+
 const CardWrapper = styled.div`
     width: 290px;
     height: 249px;
